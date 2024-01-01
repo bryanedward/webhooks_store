@@ -7,8 +7,11 @@ const bodyParser = require("body-parser")
 
 app.use(bodyParser.json());
 
-app.get('/',(req,res) => {
-    res.send("ok")
+app.post('/',(req,res) => {
+
+    res.send({
+        data: req.body
+    })
 })
 
 app.listen(4000,() => {
